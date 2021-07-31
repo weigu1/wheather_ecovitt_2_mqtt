@@ -49,7 +49,7 @@ PORT = 8000
 MQTT_CLIENT_ID = "weatherstation_" + strftime("%s", localtime()) # must be unique!# must be unique!
 MQTT_SERVER_IP = "192.168.1.60" # 127.0.0.1 if mosquitto is running on same server as python script
 MQTT_SERVER_PORT = 1883
-MQTT_TOPIC = "weigu/gaarden/gaarden/weatherstation"
+MQTT_TOPIC = "weigu/garden/garden/weatherstation"
 
 #-------------------------------------------------
 def on_connect(_client, _userdata, _flags, result_code):
