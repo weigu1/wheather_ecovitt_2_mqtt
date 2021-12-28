@@ -7,8 +7,8 @@
 #  Purpose:      Get the ecowitt weather data on port 8000 and send data to
 #                the mqtt server
 #  Author:       weigu.lu
-#  Date:         2021-03-15
-#  Version       1.0
+#  Date:         2021-12-28
+#  Version       1.0.1
 #
 #  Copyright 2020 weigu <weigu@weigu.lu>
 #
@@ -84,7 +84,7 @@ def parse_ecowitt_data(data):
     for item in data_list:
         if item.find("dateutc") != -1:
             ws_datetime = item[item.find('=')+1:].replace('+', 'T')
-            data_dict['datetime'] = ws_datetime
+            data_dict['datetime_utc'] = ws_datetime
         if item.find("tempinf") != -1:
             temp_in = round((float(item[item.find('=')+1:])-32.0) * 5/9, 2) #from F to C
             data_dict['Temperature_in_[C]'] = temp_in
