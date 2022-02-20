@@ -128,11 +128,11 @@ def parse_ecowitt_data(data):
             rain_weekly_in = float(item[item.find('=')+1:])
             data_dict['Rain_weekly'] = rain_weekly_in
         if item.find("monthlyrainin") != -1:
-            wind_gust_speed = float(item[item.find('=')+1:])
-            data_dict['Rain_monthly_[]'] = wind_gust_speed
+            rain_monthly_in = float(item[item.find('=')+1:])
+            data_dict['Rain_monthly_[]'] = rain_monthly_in
         if item.find("totalrainin") != -1:
-            wind_gust_speed = float(item[item.find('=')+1:])
-            data_dict['Rain_total_[]'] = wind_gust_speed
+            rain_total_in = float(item[item.find('=')+1:])
+            data_dict['Rain_total_[]'] = rain_total_in
         if item.find("solarradiation") != -1:
             solar_radiation = float(item[item.find('=')+1:])
             data_dict['Solar_radiation_[W/m^2]'] = solar_radiation
